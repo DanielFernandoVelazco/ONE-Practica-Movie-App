@@ -1,6 +1,6 @@
-package com.alura.screenmatch.modelos;
+package com.fernando.screenmatch.modelos;
 
-import com.alura.screenmatch.calculos.Clasificable;
+import com.fernando.screenmatch.calculos.Clasificable;
 
 public class Episodio implements Clasificable {
     private int numero;

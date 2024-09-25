@@ -1,11 +1,10 @@
-import com.alura.screenmatch.calculos.CalculadoraDeTiempo;
-import com.alura.screenmatch.calculos.FiltroRecomendacion;
-import com.alura.screenmatch.modelos.Episodio;
-import com.alura.screenmatch.modelos.Pelicula;
-import com.alura.screenmatch.modelos.Serie;
-
 import java.util.ArrayList;
 
+import com.fernando.screenmatch.calculos.CalculadoraDeTiempo;
+import com.fernando.screenmatch.calculos.FiltroRecomendacion;
+import com.fernando.screenmatch.modelos.Episodio;
+import com.fernando.screenmatch.modelos.Pelicula;
+import com.fernando.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
@@ -21,7 +20,6 @@ public class Principal {
         miPelicula.evalua(10);
         System.out.println("Total de evaluaciones: " + miPelicula.getTotalDeEvaluaciones());
         System.out.println(miPelicula.calculaMediaEvaluaciones());
-
 
         Serie lost = new Serie();
         lost.setNombre("Lost");
@@ -58,9 +56,9 @@ public class Principal {
         peliculaDeBruno.setFechaDeLanzamiento(2001);
 
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
-        listaDePeliculas.add(peliculaDeBruno);
         listaDePeliculas.add(miPelicula);
         listaDePeliculas.add(otraPelicula);
+        listaDePeliculas.add(peliculaDeBruno);
 
         System.out.println("Tamaño de la lista: " + listaDePeliculas.size());
         System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre());

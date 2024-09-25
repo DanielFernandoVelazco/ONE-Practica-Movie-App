@@ -1,4 +1,4 @@
-package com.alura.screenmatch.modelos;
+package com.fernando.screenmatch.modelos;
 
 public class Titulo {
     private String nombre;
@@ -44,17 +44,17 @@ public class Titulo {
         this.duracionEnMinutos = duracionEnMinutos;
     }
 
-    public void muestraFichaTecnica(){
+    public void muestraFichaTecnica() {
         System.out.println("Nombre de la película: " + nombre);
         System.out.println("Año de lanzamiento: " + fechaDeLanzamiento);
     }
 
-    public void evalua(double nota){
+    public void evalua(double nota) {
         sumaDeLasEvaluaciones += nota;
         totalDeEvaluaciones++;
     }
 
-    public double calculaMediaEvaluaciones(){
+    public double calculaMediaEvaluaciones() {
         return sumaDeLasEvaluaciones / totalDeEvaluaciones;
     }
 }
