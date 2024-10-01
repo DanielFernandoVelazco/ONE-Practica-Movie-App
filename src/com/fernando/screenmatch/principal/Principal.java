@@ -1,3 +1,5 @@
+package com.fernando.screenmatch.principal;
+
 import java.util.ArrayList;
 
 import com.fernando.screenmatch.calculos.CalculadoraDeTiempo;
@@ -8,8 +10,8 @@ import com.fernando.screenmatch.modelos.Serie;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Encanto");
+        Pelicula miPelicula = new Pelicula("Encanto", 2021);
+        // miPelicula.setNombre("Encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(180);
         System.out.println("Duración de la película: " + miPelicula.getDuracionEnMinutos());
@@ -21,8 +23,8 @@ public class Principal {
         System.out.println("Total de evaluaciones: " + miPelicula.getTotalDeEvaluaciones());
         System.out.println(miPelicula.calculaMediaEvaluaciones());
 
-        Serie lost = new Serie();
-        lost.setNombre("Lost");
+        Serie lost = new Serie("Lost", 2000);
+        // lost.setNombre("Lost");
         lost.setFechaDeLanzamiento(2000);
         lost.muestraFichaTecnica();
         lost.setTemporadas(10);
@@ -30,8 +32,8 @@ public class Principal {
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duracion de la série: " + lost.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Avatar");
+        Pelicula otraPelicula = new Pelicula("Avatar", 2023);
+        // otraPelicula.setNombre("Avatar");
         otraPelicula.setFechaDeLanzamiento(2023);
         otraPelicula.setDuracionEnMinutos(200);
 
@@ -50,8 +52,8 @@ public class Principal {
         episodio.setTotalVisualizaciones(300);
         filtro.filtra(episodio);
 
-        var peliculaDeBruno = new Pelicula();
-        peliculaDeBruno.setNombre("El señor de los anillos");
+        var peliculaDeBruno = new Pelicula("El señor de los anillos", 2001);
+        // peliculaDeBruno.setNombre();
         peliculaDeBruno.setDuracionEnMinutos(180);
         peliculaDeBruno.setFechaDeLanzamiento(2001);
 
@@ -62,7 +64,8 @@ public class Principal {
 
         System.out.println("Tamaño de la lista: " + listaDePeliculas.size());
         System.out.println("La primera pelicula es: " + listaDePeliculas.get(0).getNombre());
+        System.out.println(listaDePeliculas.toString());
+        System.out.println("toString de la pelicula: " + listaDePeliculas.get(0).toString());
 
-        System.out.println(listaDePeliculas);
     }
 }
