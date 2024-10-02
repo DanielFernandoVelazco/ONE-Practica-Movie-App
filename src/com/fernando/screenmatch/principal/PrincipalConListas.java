@@ -3,8 +3,8 @@ package com.fernando.screenmatch.principal;
 import com.fernando.screenmatch.modelos.Pelicula;
 import com.fernando.screenmatch.modelos.Serie;
 import com.fernando.screenmatch.modelos.Titulo;
-
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -24,10 +24,22 @@ public class PrincipalConListas {
         lista.add(lost);
 
         for (Titulo item : lista) {
-            System.out.println(item);
-            Pelicula pelicula = (Pelicula) item;
-            System.out.println(pelicula.getClasificacion());
+            System.out.println(item.getNombre());
+            if (item instanceof Pelicula pelicula && pelicula.getClasificacion() > 2) {
+                System.out.println(pelicula.getClasificacion());
+            }
         }
 
+        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        listaDeArtistas.add("Penelope Cruz");
+        listaDeArtistas.add("Natalie Portman");
+        listaDeArtistas.add("Morgan Freeman");
+        System.out.println("Lista de artistas NO ordenada " + listaDeArtistas);
+
+        Collections.sort(listaDeArtistas);
+        System.out.println("Lista de artistas ordenada " + listaDeArtistas);
+
+        Collections.sort(lista);
+        System.out.println("Lista de titulos ordenados: " + lista);
     }
 }
